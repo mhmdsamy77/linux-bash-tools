@@ -1,62 +1,99 @@
 
-# Linux System Monitoring
+# Linux Bash Tools
 
-A Bash script to monitor CPU, memory, disk usage, and system uptime on Linux.
+A collection of Bash scripts for Linux system administration tasks.
 
-## Features
+## Scripts
 
-- Displays the system hostname.
-- Monitors CPU usage.
-- Monitors memory usage.
-- Checks disk usage of the root filesystem.
-- Displays system uptime.
+### 1. System Monitoring
+
+File: `scripts/system_monitor.sh`
+
+Monitors basic Linux system resources:
+
+- Hostname
+- CPU usage
+- Memory usage
+- Disk usage
+- System uptime
+
+### 2. Backup Script
+
+File: `scripts/backup.sh`
+
+Creates compressed backups of specified directories.
+
+Features:
+
+- Accepts a directory path as input.
+- Checks if the directory exists.
+- Creates a backup directory automatically.
+- Generates compressed `.tar.gz` backup files.
+- Adds a timestamp to each backup filename.
 
 ## Requirements
 
-- Linux operating system.
-- Bash shell.
-- Standard Linux utilities: `awk`, `free`, `df`, and `uptime`.
-
-## Project Structure
-
-```text
-linux-system-monitoring/
-├── scripts/
-│   └── system_monitor.sh
-├── README.md
-└── LICENSE
-```
+- Linux operating system
+- Bash shell
+- Standard Linux utilities: `awk`, `free`, `df`, `uptime`, `tar`, and `date`
+- Git
 
 ## How to Run
 
-Clone the repository:
+### 1. Clone the Repository
 
 ```bash
-git clone git@github.com:mhmdsamy77/linux-system-monitoring.git
+git clone git@github.com:mhmdsamy77/linux-bash-tools.git
 ```
 
-Navigate to the project directory:
+### 2. Navigate to the Project Directory
 
 ```bash
-cd linux-system-monitoring
+cd linux-bash-tools
 ```
 
-Give the script execution permission:
+### 3. Give Execution Permissions
 
 ```bash
 chmod +x scripts/system_monitor.sh
+chmod +x scripts/backup.sh
 ```
 
-Run the script:
+### 4. Run the System Monitoring Script
 
 ```bash
 ./scripts/system_monitor.sh
 ```
 
+### 5. Run the Backup Script
+
+Replace `/path/to/directory` with the directory you want to back up.
+
+```bash
+./scripts/backup.sh /path/to/directory
+```
+
+Backups are saved in:
+
+```text
+~/backups/
+```
+
+## Project Structure
+
+```text
+linux-bash-tools/
+├── scripts/
+│   ├── system_monitor.sh
+│   └── backup.sh
+├── README.md
+└── LICENSE
+```
+
 ## Technologies Used
 
 - Linux
-- Bash
+- Bash Scripting
 - Git
 - GitHub
 
